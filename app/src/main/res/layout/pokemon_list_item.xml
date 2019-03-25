@@ -25,7 +25,8 @@
                 android:layout_height="150dp"
                 android:contentDescription="@string/todo"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@drawable/ic_launcher_background"
+                android:transitionName="image_transition"/>
 
             <TextView
                 android:id="@+id/text_pokemon_name"

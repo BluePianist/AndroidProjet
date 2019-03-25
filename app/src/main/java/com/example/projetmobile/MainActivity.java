@@ -11,7 +11,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.support.v7.widget.RecyclerView;
+import android.transition.AutoTransition;
+import android.transition.ChangeBounds;
+import android.transition.Fade;
+import android.transition.Scene;
+import android.transition.TransitionManager;
+import android.transition.TransitionSet;
 import android.view.MenuItem;
+import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -28,6 +35,9 @@ import com.example.projetmobile.PokemonList;
 public class MainActivity extends AppCompatActivity{
 
     Toolbar toolbar;
+    Scene firstScene;
+    Scene secondScene;
+
 
     BroadcastReceiver showDetail = new BroadcastReceiver() {
         @Override
@@ -43,9 +53,17 @@ public class MainActivity extends AppCompatActivity{
                 detailFragment.setArguments(bundle);
 
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.addSharedElement(findViewById(R.id.pokemon_image), "image_transition");
                 fragmentTransaction.replace(R.id.list_pokemon_fragment,detailFragment);
                 fragmentTransaction.addToBackStack("detail");
                 fragmentTransaction.commit();
+
+                TransitionSet set = new TransitionSet();
+                set.addTransition(new Fade())
+                        .addTransition(new ChangeBounds())
+                        .addTransition(new AutoTransition());
+
+
 
                 //Set pokemon name
 
