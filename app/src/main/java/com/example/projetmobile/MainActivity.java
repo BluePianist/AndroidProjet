@@ -61,7 +61,8 @@ public class MainActivity extends AppCompatActivity{
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
                         R.anim.enter_left_to_right, R.anim.exit_left_to_right);
-                fragmentTransaction.addSharedElement(findViewById(R.id.pokemon_image), "image_transition");
+                //fragmentTransaction.addSharedElement(findViewById(R.id.pokemon_image), "image_transition");
+                fragmentTransaction.show(detailFragment);
                 fragmentTransaction.replace(R.id.list_pokemon_fragment,detailFragment);
                 fragmentTransaction.addToBackStack("detail");
                 fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);

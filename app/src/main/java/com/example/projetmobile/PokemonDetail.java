@@ -75,7 +75,7 @@ public class PokemonDetail extends Fragment {
         recycler_next_evolution = (RecyclerView) itemView.findViewById(R.id.recycler_next_evolution);
         recycler_next_evolution.setHasFixedSize(true);
         recycler_next_evolution.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false));
-        slidrInterface = Slidr.attach(getActivity());
+        //slidrInterface = Slidr.attach(getActivity().onAttachFragment(this));
 
         setDetailPokemon(pokemon);
 
