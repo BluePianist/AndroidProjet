@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
@@ -15,9 +16,11 @@ import android.transition.AutoTransition;
 import android.transition.ChangeBounds;
 import android.transition.Fade;
 import android.transition.Scene;
+import android.transition.TransitionInflater;
 import android.transition.TransitionManager;
 import android.transition.TransitionSet;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.LinearLayout;
@@ -30,6 +33,7 @@ import com.example.projetmobile.Adaptater.PokemonListAdapter;
 import com.example.projetmobile.Common.Common;
 import com.example.projetmobile.Model.Pokemon;
 import com.example.projetmobile.PokemonList;
+import com.r0adkll.slidr.Slidr;
 
 
 public class MainActivity extends AppCompatActivity{
@@ -37,6 +41,7 @@ public class MainActivity extends AppCompatActivity{
     Toolbar toolbar;
     Scene firstScene;
     Scene secondScene;
+
 
 
     BroadcastReceiver showDetail = new BroadcastReceiver() {
@@ -51,19 +56,21 @@ public class MainActivity extends AppCompatActivity{
                 Bundle bundle = new Bundle();
                 bundle.putString("num",num);
                 detailFragment.setArguments(bundle);
+                //mFragmentManager = getSupportFragmentManager();
 
                 FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
+                        R.anim.enter_left_to_right, R.anim.exit_left_to_right);
                 fragmentTransaction.addSharedElement(findViewById(R.id.pokemon_image), "image_transition");
                 fragmentTransaction.replace(R.id.list_pokemon_fragment,detailFragment);
                 fragmentTransaction.addToBackStack("detail");
+                fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
                 fragmentTransaction.commit();
 
-                TransitionSet set = new TransitionSet();
-                set.addTransition(new Fade())
-                        .addTransition(new ChangeBounds())
-                        .addTransition(new AutoTransition());
 
 
+
+                //mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
 
                 //Set pokemon name
 
@@ -131,6 +138,49 @@ public class MainActivity extends AppCompatActivity{
                 default:
                     break;
         }
-        return true     ;
+        return true;
     }
+/*
+    private void performTransition()
+    {
+        if (isDestroyed())
+        {
+            return;
+        }
+        Fragment previousFragment = mFragmentManager.findFragmentById(R.id.list_pokemon_fragment);
+        Fragment nextFragment = PokemonDetail.getInstance();
+
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
+
+        // 1. Exit for Previous Fragment
+        Fade exitFade = new Fade();
+        exitFade.setDuration(FADE_DEFAULT_TIME);
+        previousFragment.setExitTransition(exitFade);
+
+        // 2. Shared Elements Transition
+        TransitionSet enterTransitionSet = new TransitionSet();
+        enterTransitionSet.addTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.move));
+        enterTransitionSet.setDuration(MOVE_DEFAULT_TIME);
+        enterTransitionSet.setStartDelay(FADE_DEFAULT_TIME);
+        nextFragment.setSharedElementEnterTransition(enterTransitionSet);
+
+        // 3. Enter Transition for New Fragment
+        Fade enterFade = new Fade();
+        enterFade.setStartDelay(MOVE_DEFAULT_TIME + FADE_DEFAULT_TIME);
+        enterFade.setDuration(FADE_DEFAULT_TIME);
+        nextFragment.setEnterTransition(enterFade);
+
+        View logo = findViewById(R.id.pokemon_image);
+        fragmentTransaction.addSharedElement(logo, logo.getTransitionName());
+        fragmentTransaction.replace(R.id.list_pokemon_fragment, nextFragment);
+        fragmentTransaction.commitAllowingStateLoss();
+    }
+
+    @Override
+    protected void onDestroy()
+    {
+        super.onDestroy();
+        mDelayedTransactionHandler.removeCallbacks(mRunnable);
+    }
+    */
 }

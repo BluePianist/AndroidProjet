@@ -16,6 +16,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
 }
 
 dependencies {
@@ -45,6 +49,8 @@ dependencies {
 
     implementation 'com.robertlevonyan.view:MaterialChipView:1.2.4'
     implementation 'com.github.mancj:MaterialSearchBar:0.8.2'
+    implementation 'com.r0adkll:slidableactivity:2.0.6'
+
 
 
     // compile 'androidx.legacy:legacy-support-v4:1.0.0'

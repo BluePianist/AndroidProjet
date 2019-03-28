@@ -17,6 +17,10 @@ import com.example.projetmobile.Adaptater.PokemonEvolutionAdapter;
 import com.example.projetmobile.Adaptater.PokemonTypeAdapter;
 import com.example.projetmobile.Common.Common;
 import com.example.projetmobile.Model.Pokemon;
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrConfig;
+import com.r0adkll.slidr.model.SlidrInterface;
+import com.r0adkll.slidr.model.SlidrPosition;
 
 
 /**
@@ -27,6 +31,8 @@ public class PokemonDetail extends Fragment {
     ImageView pokemon_img;
     TextView pokemon_name, pokemon_wheight, pokemon_height;
     RecyclerView recycler_type, recycler_weakness, recycler_prev_evolution, recycler_next_evolution;
+    SlidrInterface slidrInterface;
+
 
     static PokemonDetail instance;
 
@@ -43,8 +49,7 @@ public class PokemonDetail extends Fragment {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View itemView = inflater.inflate(R.layout.fragment_pokemon_detail, container, false);
 
@@ -70,11 +75,19 @@ public class PokemonDetail extends Fragment {
         recycler_next_evolution = (RecyclerView) itemView.findViewById(R.id.recycler_next_evolution);
         recycler_next_evolution.setHasFixedSize(true);
         recycler_next_evolution.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL,false));
+        slidrInterface = Slidr.attach(getActivity());
 
         setDetailPokemon(pokemon);
 
         return itemView;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+           // slidrInterface = Slidr.replace();
+    }
+
 
     private void setDetailPokemon(Pokemon pokemon) {
         //load Img

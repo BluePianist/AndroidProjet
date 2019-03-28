@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Fade;
+import android.transition.Slide;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,8 +17,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.projetmobile.Common.Common;
+import com.example.projetmobile.DetailTransition;
 import com.example.projetmobile.Interface.ItemClickListener;
 import com.example.projetmobile.Model.Pokemon;
+import com.example.projetmobile.PokemonDetail;
 import com.example.projetmobile.R;
 
 import java.util.List;
@@ -50,6 +55,15 @@ public class PokemonListAdapter extends RecyclerView.Adapter<PokemonListAdapter.
             @Override
             public void onCLick(View view, int position) {
                // Toast.makeText(context,"click on pokemon " + pokemonList.get(position).getName(), Toast.LENGTH_LONG).show();
+                /*
+                PokemonDetail pokemonDetail = PokemonDetail.getInstance();
+                pokemonDetail.setSharedElementEnterTransition(new DetailTransition());
+                pokemonDetail.setEnterTransition(new Slide(Gravity.RIGHT));
+                pokemonDetail.setExitTransition(new Slide(Gravity.LEFT));
+                pokemonDetail.setSharedElementReturnTransition(new DetailTransition());
+                */
+
+
 
                 LocalBroadcastManager.getInstance(context)
                         .sendBroadcast(new Intent(Common.KEY_ENABLE_HOME).putExtra("num", pokemonList.get(position).getNum()));

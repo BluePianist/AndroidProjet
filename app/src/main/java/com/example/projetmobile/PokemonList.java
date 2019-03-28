@@ -28,11 +28,16 @@ import com.example.projetmobile.Model.Pokemon;
 import com.example.projetmobile.Retrofit.IPokemonDex;
 import com.example.projetmobile.Retrofit.RetrofitClient;
 import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.r0adkll.slidr.Slidr;
+import com.r0adkll.slidr.model.SlidrConfig;
+import com.r0adkll.slidr.model.SlidrInterface;
+import com.r0adkll.slidr.model.SlidrPosition;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -56,6 +61,7 @@ public class PokemonList extends Fragment{
     List<String> last_suggest = new ArrayList<>();
     PokemonListAdapter search_adapter;
     MaterialSearchBar searchBar;
+
 
 
     static PokemonList instance;
@@ -93,6 +99,8 @@ public class PokemonList extends Fragment{
         pokemon_list_recyclerview.setAdapter(adapter);
         ItemOffsetDecoration itemOffsetDecoration = new ItemOffsetDecoration(4);
         pokemon_list_recyclerview.addItemDecoration(itemOffsetDecoration);
+
+
 
         //Setup SearchBar
         searchBar = (MaterialSearchBar)view.findViewById(R.id.search_bar);
@@ -141,6 +149,7 @@ public class PokemonList extends Fragment{
 
         return view;
     }
+
 
     private void startSearch(CharSequence text) {
         if(Common.commonPokemonList.size() > 0){
