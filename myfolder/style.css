@@ -1,3 +1,4 @@
-img[alt=screenshot] { 
-	width: 200px; 
+#screenshot { 
+	width: 50%;
+	height: 50%; 
 }
