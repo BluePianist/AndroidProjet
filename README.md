@@ -46,6 +46,6 @@ La SearchBar permet d'effectuer une recherche parmi l'intégralité des pokémon
 La page Détail permet une vue détaillée du pokémon désiré.
 
 
-<img id="screenshot" src="/myfolder/bulbasur.jpg" height="30%" width="30%">
+<img id="screenshot" src="/myfolder/bulbasur.jpg" height="30%" width="30%"> <img id="screenshot" src="/myfolder/charmender.jpg" height="30%" width="30%"> <img id="screenshot" src="/myfolder/pikachu.jpg" height="30%" width="30%">
 
 
