@@ -102,6 +102,8 @@ public class PokemonList extends Fragment{
         ItemOffsetDecoration itemOffsetDecoration = new ItemOffsetDecoration(4);
         pokemon_list_recyclerview.addItemDecoration(itemOffsetDecoration);
 
+
+
         Transition transition =
                 TransitionInflater.from(getContext())
                         .inflateTransition(R.transition.image_shared_element_transition);
