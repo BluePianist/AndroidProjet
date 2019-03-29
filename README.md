@@ -37,6 +37,8 @@ Pour faciliter l'utilisation de notre application, diverses fontionnalités ont 
 
 #### SearchBar ####
 
+La SearchBar permet d'effectuer une recherche parmi l'intégralité des pokémon.
+
 <img id="screenshot" src="/myfolder/searchbar.gif" height="30%" width="30%">
 
 
