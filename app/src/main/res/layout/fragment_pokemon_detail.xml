@@ -122,7 +122,9 @@
             android:layout_marginTop="-30dp"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:transitionName="image_transitionn"/>
+            android:transitionName="@string/image_transition">
+
+        </ImageView>
     </RelativeLayout>
 
 </RelativeLayout>
