@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity{
                 fragmentTransaction.commitAllowingStateLoss();
 
 
-
-
                 //mDelayedTransactionHandler.postDelayed(mRunnable, 1000);
 
                 //Set pokemon name
