@@ -10,6 +10,8 @@ Ceci est une application android affichant la liste des pokémon de la première
 Cette application révolutionnaire que l'on pourrait appeler un Pokédex permet d'avoir avec soi une liste élégante des pokémons de la première génération.
 Elle utilise l'Api [PokéApi](https://pokeapi.co "PokéApi") et stocke les données en cache.
 
+Fichier apk présent via le chemin /app/release/app-release.apk
+
 ## Critères Respectés ##
 
 * Utilisation de deux activity et de deux fragments
