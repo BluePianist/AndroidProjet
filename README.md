@@ -14,5 +14,6 @@ Elle utilise l'Api [PokéApi](https://pokeapi.co "PokéApi") et stocke les donn�
 
 Pour améliorer l'expérience utilisateur des effets de transitions ont été utilisés
 
-![transition](/myfolder/interface.gif "Gif Example")
+<img id="screenshot" src="/myfolder/interface.gif" height="30%" width="30%">
+<!-- ![transition](/myfolder/interface.gif "Gif Example") -->
 
