@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MenuActivity">
+
+
+    <ImageView
+        android:id="@+id/logo_menu"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:contentDescription="@string/logo_image"
+        android:src="@drawable/pokemon20logo20high20res1">
+
+    </ImageView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/logo_menu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="91dp"
+        android:layout_marginEnd="131dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="button"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:onClick="pokemon_list_activity"
+        android:scaleType="centerInside"
+        android:src="@drawable/pokeball">
+
+    </ImageButton>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageButton"
+        android:layout_alignEnd="@+id/imageButton"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="92dp"
+        android:text="Go !"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+</RelativeLayout>

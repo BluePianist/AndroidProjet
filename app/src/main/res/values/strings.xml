@@ -6,4 +6,6 @@
     <string name="todo">TODO</string>
     <string name="pikachu">Pikachu</string>
     <string name="image_transition">image_transition</string>
+    <string name="logo_image">logo_image</string>
+    <string name="enter">Enter</string>
 </resources>

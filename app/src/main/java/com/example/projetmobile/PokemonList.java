@@ -12,6 +12,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.transition.Transition;
+import android.transition.TransitionInflater;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -99,6 +101,11 @@ public class PokemonList extends Fragment{
         pokemon_list_recyclerview.setAdapter(adapter);
         ItemOffsetDecoration itemOffsetDecoration = new ItemOffsetDecoration(4);
         pokemon_list_recyclerview.addItemDecoration(itemOffsetDecoration);
+
+        Transition transition =
+                TransitionInflater.from(getContext())
+                        .inflateTransition(R.transition.image_shared_element_transition);
+        setSharedElementEnterTransition(transition);
 
 
 
