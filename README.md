@@ -3,7 +3,9 @@
 # Pokemon List Application #
 Ceci est une application android affichant la liste des pokémon de la première génération
 
-<img id="screenshot" src="/myfolder/Screenshot_1.jpg" height="50%" width="50%">
+<img id="screenshot" src="/myfolder/Screenshot_1.jpg" height="30%" width="30%">
 
-<!-- ![screenshot](../master/myfolder/Screenshot_1.jpg)
- -->
+## Présentation ##
+
+Cette application révolutionnaire que l'on pourrait appeler un Pokédex permet d'avoir avec soi une liste élégante des pokémons de la première génération.
+Elle utilise l'Api [Api Link](https://pokeapi.co "PokéApi") et stocke les données en cache.
