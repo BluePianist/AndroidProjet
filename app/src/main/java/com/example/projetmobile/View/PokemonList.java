@@ -1,47 +1,32 @@
-package com.example.projetmobile;
+package com.example.projetmobile.View;
 
 
-import android.opengl.Matrix;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.transition.Transition;
 import android.transition.TransitionInflater;
-import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
 
-import com.example.projetmobile.Adaptater.PokemonListAdapter;
-import com.example.projetmobile.Common.Common;
-import com.example.projetmobile.Common.ItemOffsetDecoration;
+import com.example.projetmobile.Controller.Adaptater.PokemonListAdapter;
+import com.example.projetmobile.Controller.Common.Common;
+import com.example.projetmobile.Controller.Common.ItemOffsetDecoration;
 import com.example.projetmobile.Model.Pokedex;
 import com.example.projetmobile.Model.Pokemon;
-import com.example.projetmobile.Retrofit.IPokemonDex;
-import com.example.projetmobile.Retrofit.RetrofitClient;
+import com.example.projetmobile.Controller.Retrofit.IPokemonDex;
+import com.example.projetmobile.Controller.Retrofit.RetrofitClient;
+import com.example.projetmobile.R;
 import com.mancj.materialsearchbar.MaterialSearchBar;
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrConfig;
-import com.r0adkll.slidr.model.SlidrInterface;
-import com.r0adkll.slidr.model.SlidrPosition;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
-import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.functions.Consumer;

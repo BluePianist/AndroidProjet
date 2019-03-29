@@ -1,10 +1,12 @@
-package com.example.projetmobile;
+package com.example.projetmobile.View;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ViewFlipper;
+
+import com.example.projetmobile.R;
 
 public class MenuActivity extends AppCompatActivity {
     ViewFlipper v_flipper;

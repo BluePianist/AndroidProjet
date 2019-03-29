@@ -1,4 +1,4 @@
-package com.example.projetmobile.Retrofit;
+package com.example.projetmobile.Controller.Retrofit;
 
 import com.example.projetmobile.Model.Pokedex;
 

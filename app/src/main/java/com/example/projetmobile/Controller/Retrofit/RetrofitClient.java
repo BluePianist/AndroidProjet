@@ -1,4 +1,4 @@
-package com.example.projetmobile.Retrofit;
+package com.example.projetmobile.Controller.Retrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;

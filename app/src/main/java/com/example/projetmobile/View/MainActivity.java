@@ -1,39 +1,22 @@
-package com.example.projetmobile;
+package com.example.projetmobile.View;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.os.Handler;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.widget.RecyclerView;
-import android.transition.AutoTransition;
-import android.transition.ChangeBounds;
-import android.transition.Fade;
 import android.transition.Scene;
-import android.transition.TransitionInflater;
-import android.transition.TransitionManager;
-import android.transition.TransitionSet;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.Fragment;
-import android.view.InflateException;
 
-import com.example.projetmobile.Adaptater.PokemonListAdapter;
-import com.example.projetmobile.Common.Common;
+import com.example.projetmobile.Controller.Common.Common;
 import com.example.projetmobile.Model.Pokemon;
-import com.example.projetmobile.PokemonList;
-import com.r0adkll.slidr.Slidr;
+import com.example.projetmobile.R;
 
 
 public class MainActivity extends AppCompatActivity{

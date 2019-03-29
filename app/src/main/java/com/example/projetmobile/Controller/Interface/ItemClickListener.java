@@ -1,4 +1,4 @@
-package com.example.projetmobile.Interface;
+package com.example.projetmobile.Controller.Interface;
 
 import android.view.View;
 

@@ -1,4 +1,4 @@
-package com.example.projetmobile;
+package com.example.projetmobile.View;
 
 import android.content.Context;
 import android.transition.ChangeBounds;

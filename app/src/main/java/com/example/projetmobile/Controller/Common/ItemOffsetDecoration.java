@@ -1,4 +1,4 @@
-package com.example.projetmobile.Common;
+package com.example.projetmobile.Controller.Common;
 
 import android.content.Context;
 import android.graphics.Rect;

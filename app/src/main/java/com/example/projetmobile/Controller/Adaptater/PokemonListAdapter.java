@@ -1,26 +1,20 @@
-package com.example.projetmobile.Adaptater;
+package com.example.projetmobile.Controller.Adaptater;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.widget.RecyclerView;
-import android.transition.Fade;
-import android.transition.Slide;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.example.projetmobile.Common.Common;
-import com.example.projetmobile.DetailTransition;
-import com.example.projetmobile.Interface.ItemClickListener;
+import com.example.projetmobile.Controller.Common.Common;
+import com.example.projetmobile.Controller.Interface.ItemClickListener;
 import com.example.projetmobile.Model.Pokemon;
-import com.example.projetmobile.PokemonDetail;
 import com.example.projetmobile.R;
 
 import java.util.List;

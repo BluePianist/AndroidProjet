@@ -1,4 +1,4 @@
-package com.example.projetmobile.Common;
+package com.example.projetmobile.Controller.Common;
 
 import com.example.projetmobile.Model.Pokemon;
 import android.graphics.Color;

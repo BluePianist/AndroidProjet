@@ -1,27 +1,23 @@
-package com.example.projetmobile;
+package com.example.projetmobile.View;
 
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.transition.TransitionInflater;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.projetmobile.Adaptater.PokemonEvolutionAdapter;
-import com.example.projetmobile.Adaptater.PokemonTypeAdapter;
-import com.example.projetmobile.Common.Common;
+import com.example.projetmobile.Controller.Adaptater.PokemonEvolutionAdapter;
+import com.example.projetmobile.Controller.Adaptater.PokemonTypeAdapter;
+import com.example.projetmobile.Controller.Common.Common;
 import com.example.projetmobile.Model.Pokemon;
-import com.r0adkll.slidr.Slidr;
-import com.r0adkll.slidr.model.SlidrConfig;
+import com.example.projetmobile.R;
 import com.r0adkll.slidr.model.SlidrInterface;
-import com.r0adkll.slidr.model.SlidrPosition;
 
 
 /**
