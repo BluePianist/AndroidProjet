@@ -48,4 +48,12 @@ La page Détail permet une vue détaillée du pokémon désiré.
 
 <img id="screenshot" src="/myfolder/bulbasur.jpg" height="30%" width="30%"> <img id="screenshot" src="/myfolder/charmender.jpg" height="30%" width="30%"> <img id="screenshot" src="/myfolder/pikachu.jpg" height="30%" width="30%">
 
+#### Recherche par évolution ####
+
+Si vous avez oublié le nom du pokémon recherché vous pouvez passer par ses Pré-évolutions et faire une recherche par étape :
+
+<img id="screenshot" src="/myfolder/evolutionsearch.gif" height="30%" width="30%">
+
+Il suffit de toucher le nom du pokémon dans la rubrique `Next Evolution` ou `Previous Evolution`.
+
 
