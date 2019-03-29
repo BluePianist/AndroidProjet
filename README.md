@@ -26,7 +26,17 @@ Elle utilise l'Api [PokéApi](https://pokeapi.co "PokéApi") et stocke les donn�
 ## Interface Utilisateur ##
 
 L'écran principal, simple et élégant contient un  `ButtonImage` dirigeant vers la liste.
+
 Pour améliorer l'expérience utilisateur des effets de transitions ont été utilisés entre les fragments.
 
 <img id="screenshot" src="/myfolder/interface.gif" height="30%" width="30%">
+
+## Fonctionnalités ##
+
+Pour faciliter l'utilisation de notre application, diverses fontionnalités ont été implémentées.
+
+#### SearchBar ####
+
+<img id="screenshot" src="/myfolder/searchbar.gif" height="30%" width="30%">
+
 
